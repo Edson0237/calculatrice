@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+    background-color: #ecf0f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.content {
+    margin-top: 15px;
+    border-radius: 30px;
+    margin-inline: 50px;
+    padding: 10px;
+    box-shadow: 12px 12px 20px #cbced1,
+        -12px -12px 20px #cbced1;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        text-align: start;
+    }
+
+    .btn {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: .5rem;
+
+        button {
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+            background-color: #9c0879;
+            border: none;
+        }
+
+    }
+}
+
+.ecran {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    border: none none;
+    margin-block-end: 10px;
+
+    textarea {
+        display: flex;
+        align-items: center;
+        background-color: #ecf0f3;
+        width: 100%;
+        height: 100%;
+        resize: none;
+        box-shadow:
+            inset 8px 8px 8px #cbced1
+            /*#0ef*/
+            ,
+            inset -8px -8px 8px #ffffff;
+        padding: 20px;
+        text-align: right;
+        color: #000000;
+        font-size: 30px;
+        font-weight: 800;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+.block {
+    padding: 20px;
+    margin: 20px;
+    gap: .5rem;
+    border: 2px solid;
+    border-radius: 30px;
+}
+
+.touche {
+    width: 100%;
+
+    button {
+        background-color: #9c0879;
+        border-radius: 10px;
+        border: 3px solid white;
+        cursor: pointer;
+        transition: .5s;
+        box-shadow: 0px 2px 2px 0px white;
+        font-weight: 900;
+        font-size: 20px;
+        color: rgb(1, 4, 3);
+        height: 50px;
+
+    }
+
+    button:hover {
+        background-color: rgb(56, 219, 234);
+        box-shadow: 2px 2px 2px 2px grey;
+        color: aliceblue;
+    }
+
+    .ligne1 {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        gap: .4rem;
+        margin-block: 5px;
+        margin-inline-end: 16px;
+    }
+
+    .ligne5 {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        gap: .4rem;
+    }
+
+}
