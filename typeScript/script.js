@@ -14,7 +14,7 @@ for( item of btn){
     });
 }
 
-function backspace(){
+function clear(){
     ecran.value = ecran.value.substr(0, ecran.value.length -1);
 }
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <div class="content">
+        <div class="block">
+            <div class="head">
+                <h3><span class="name">EDSON</span> CALCULATOR</h3>
+                <div class="btn">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="text">
+                <textarea readonly name="textarea" class="ecran" ></textarea>
+            </div>
+            <div class="touche">
+                <div class="ligne1">
+                    <button class="btn" onclick="clickme('1')">1</button>
+                    <button class="btn" onclick="clickme('2')">2</button>
+                    <button class="btn" onclick="clickme('3')">3</button>
+                    <button class="btn" onclick="clickme('+')">+</button>
+                </div>
+                <div class="ligne1">
+                    <button class="btn" onclick="clickme('4')">4</button>
+                    <button class="btn" onclick="clickme('5')">5</button>
+                    <button class="btn" onclick="clickme('6')">6</button>
+                    <button class="btn" onclick="clickme('-')">-</button>
+                </div>
+                <div class="ligne1">
+                    <button class="btn" onclick="clickme('7')">7</button>
+                    <button class="btn" onclick="clickme('8')">8</button>
+                    <button class="btn" onclick="clickme('9')">9</button>
+                    <button class="btn" onclick="clickme('×')">×</button>
+                </div>
+                <div class="ligne1">
+                    <button  class="btn" onclick="clickme('0')">0</button>
+                    <button  class="btn" onclick="clickme('00')">00</button>
+                    <button  class="btn" onclick="clickme('.')">.</button>
+                    <button  class="btn" onclick="clickme('÷')">÷</button>
+                </div>
+                <div class="ligne5">
+                    <button id="eval" onclick="document.querySelector('.ecran').value= eval(document.querySelector('.ecran').value)">=</button>
+                    <button onclick="document.querySelector('.ecran').textContent= ' '">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/script/script.js"></script>
+</body>
+</html>
