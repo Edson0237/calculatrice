@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
     <title>Calculatrice</title>
 </head>
+
 <body>
     <div class="content">
         <div class="block">
@@ -17,18 +19,19 @@
                 </div>
             </div>
             <div class="text">
-                <textarea readonly name="textarea" class="ecran" ></textarea>
+                <textarea readonly name="textarea" class="ecran"></textarea>
             </div>
             <div class="touche touche1">
                 <div class="ligne5">
-                    <button onclick="ecran.value='' "style="background-color: rgba(255, 0, 0, 0.703); color: white;">AC</button>
-                    <button id="heure"></button>               
+                    <button onclick="ecran.value='' "
+                        style="background-color: rgba(255, 0, 0, 0.703); color: white;">AC</button>
+                    <button id="heure"></button>
                 </div>
                 <div class="ligne1">
                     <button onclick="Cosinus()">Cos</button>
                     <button onclick="Sinus()">Sin</button>
                     <button onclick="Squart()" style="font-weight: bold; font-size: 30px;">√</button>
-                    <button class="btn">(</button>                    
+                    <button class="btn">(</button>
                     <button class="btn">)</button>
                 </div>
                 <div class="ligne1">
@@ -39,50 +42,71 @@
                     <button onclick="Exponentielle()">e</button>
                 </div>
                 <div class="ligne1">
-                    <button  onclick="binaire()">Bin</button>
+                    <button onclick="binaire()">Bin</button>
                     <button class="btn" onclick="octal()">Oct</button>
                     <button class="btn" onclick="decimal()">Dec</button>
                     <button class="btn" onclick="hexadecimal()">Hex</button>
-                    <button  onclick="pi()">&pi;</button>
+                    <button onclick="pi()">&pi;</button>
                 </div>
             </div>
             <div class="simple">
-                <div class="ligne1">
-                    <button class="btn" onclick="clickme('1')">1</button>
-                    <button class="btn" onclick="clickme('2')">2</button>
-                    <button class="btn" onclick="clickme('3')">3</button>
-                    <button onclick="ecran.value= ' '"  style="background-color: rgba(255, 0, 0, 0.703); color: white;">AC</button>
-                    <button onclick="backspace()" id="heure" style="background-color: rgba(255, 0, 0, 0.703);">DEL</button>
+                <div class="touche">
+                    <div class="ligne1">
+                        <button class="btn" onclick="clickme()">1</button>
+                        <button class="btn" onclick="clickme()">2</button>
+                        <button class="btn" onclick="clickme()">3</button>
+                        <button onclick="ecran.value= ' '"
+                            style="background-color: rgba(255, 0, 0, 0.703); color: white;">AC</button>
+                        <button onclick="backspace()" id="heure"
+                            style="background-color: rgba(255, 0, 0, 0.703);">DEL</button>
+                        <button class="btn" onclick="clickme()">+</button>
+                    </div>
+                    <div class="ligne1">
+                        <button class="btn" onclick="clickme()">4</button>
+                        <button class="btn" onclick="clickme()">5</button>
+                        <button class="btn" onclick="clickme()">6</button>
+                        <button class="btn" onclick="clickme()">-</button>
+                        <button class="btn" onclick="clickme()">+</button>
+                    </div>
+                    <div class="ligne1">
+                        <button class="btn" onclick="clickme()">7</button>
+                        <button class="btn" onclick="clickme()">8</button>
+                        <button class="btn" onclick="clickme()">9</button>
+                        <button class="btn" onclick="clickme()">×</button>
+                        <button class="btn" onclick="clickme()">÷</button>
+                    </div>
+                    <div class="ligne1">
+                        <button class="btn" onclick="clickme()">0</button>
+                        <button class="btn" onclick="clickme()">.</button>
+                        <button class="btn" onclick="clickme()">Exp</button>
+                        <button class="btn">%</button>
+                        <button class="btn" onclick="clickme()">div</button>
+                    </div>
+                    <div class="ligne5">
+                        <button id="mode  mnomarle" onclick="normal()">Normal</button>
+                        <button id="eval" onclick="egale()">=</button>
+                    </div>
                 </div>
-                <div class="ligne1">
-                    <button class="btn" onclick="clickme('4')">4</button>
-                    <button class="btn" onclick="clickme('5')">5</button>
-                    <button class="btn" onclick="clickme('6')">6</button>
-                    <button class="btn" onclick="clickme('-')">-</button>
-                    <button class="btn" onclick="clickme('+')">+</button>
-                </div>
-                <div class="ligne1">
-                    <button class="btn" onclick="clickme('7')">7</button>
-                    <button class="btn" onclick="clickme('8')">8</button>
-                    <button class="btn" onclick="clickme('9')">9</button>
-                    <button class="btn" onclick="clickme('×')">×</button>
-                    <button class="btn" onclick="clickme('÷')">÷</button>
-                </div>
-                <div class="ligne1">
-                    <button  class="btn" onclick="clickme('0')">0</button>
-                    <button  class="btn" onclick="clickme('.')">.</button>
-                    <button class="btn" onclick="clickme()">Exp</button>
-                    <button class="btn">%</button>
-                    <button class="btn" onclick="clickme()">div</button>
-                </div>
-                <div class="ligne5">
-                    <button id="mode  mnomarle" onclick="normal()">Normal</button>
-                    <button id="eval" onclick="egale()">=</button>
-                </div>
-            </div>
             </div>
         </div>
-   </div>
-<script src="/typeScript/script.js"></script>
+    </div>
+    <script src="/typeScript/script.js"></script>
+    </div>
+    <div class="ligne1">
+        <button class="btn" onclick="clickme('0')">0</button>
+        <button class="btn" onclick="clickme('00')">00</button>
+        <button class="btn" onclick="clickme('.')">.</button>
+        <button class="btn" onclick="clickme('÷')">÷</button>
+    </div>
+    <div class="ligne5">
+        <button id="eval"
+            onclick="document.querySelector('.ecran').value= eval(document.querySelector('.ecran').value)">=</button>
+        <button onclick="document.querySelector('.ecran').textContent= ' '">Clear</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="/script/script.js"></script>
 </body>
+
 </html>

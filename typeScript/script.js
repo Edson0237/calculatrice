@@ -16,8 +16,19 @@ for (item of btn) {
         if (btntext == '×') {
             btntext = '*';
         }
+    });
+}
 
-        ecran.value += btntext;
+for( item of btn){
+    item.addEventListener('click' , (e) => {
+        btntext = e.target.innerText;
+        if(btntext =='÷'){
+            btntext = '/';
+        }
+        if(btntext == '×' ){
+            btntext = '*';
+        }
+         ecran.value += btntext;
     });
 }
 
@@ -154,9 +165,6 @@ function normal() {
 
 }
 
-
-
-
 var btn = document.getElementById("mode");
 var affichable = document.getElementsByClassName("simple");
 var afficher = false;
@@ -172,3 +180,7 @@ btn.addEventListener('click', function () {
         afficher = false;
     }
 });
+
+function clear(){
+    ecran.value = ecran.value.substr(0, ecran.value.length -1);
+}
